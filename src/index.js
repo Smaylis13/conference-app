@@ -6,12 +6,17 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css'
 
 import TalkService from './common/talk.service';
+import layout from "./layout/index"
 
 // intégration JQuery
 window.$ = window.jQuery = require('jquery');
 
-const talkService = new TalkService()
+//const talkService = new TalkService()
 
-const tabSpeakers = talkService.findAllSpeakers()
+//const tabSpeakers = talkService.findAllSpeakers()
 
-console.log(tabSpeakers)
+//console.log(tabSpeakers)
+
+let lay = new layout();
+lay.render();
+
