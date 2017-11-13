@@ -13,5 +13,8 @@ window.$ = window.jQuery = require('jquery');
 const talkService = new TalkService()
 
 const tabSpeakers = talkService.findAllSpeakers()
-
-console.log(tabSpeakers)
+let i = 0
+tabSpeakers.then((data) => {
+    for(i in data)
+        console.log(data[i].firstname + " "+data[i].lastname)
+ } )
