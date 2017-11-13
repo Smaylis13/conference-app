@@ -11,15 +11,17 @@ import layout from "./layout/index"
 // intégration JQuery
 window.$ = window.jQuery = require('jquery');
 
-const talkService = new TalkService()
 
+const talkService = new TalkService();
 
 const tabSpeakers = talkService.findAllSpeakers()
 let i = 0
 tabSpeakers.then((data) => {
     for(i in data)
         console.log(data[i].firstname)
- } )
+})
+
+
 
  // Etape 4 - Routeur 
 
@@ -38,3 +40,8 @@ tabSpeakers.then((data) => {
     };
     router();
 });
+
+
+// ................
+let lay = new layout();
+lay.render();
