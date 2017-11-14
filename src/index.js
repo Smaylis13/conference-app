@@ -9,13 +9,10 @@ import TalkService from './common/talk.service';
 import layout from "./layout/index"
 import listSpeakers from "./speakers/list/index"
 import listSessions from "./sessions/list/index"
-<<<<<<< HEAD
 import navBar from "./navbar/index"
 import vueAccueil from "./defaultVue/index"
-=======
 import logo from "./logo/index"
 import session from "./sessions/affichage/index"
->>>>>>> 46b705e9b1dd231fedf254e555042e62c3c94562
 
 // intégration JQuery
 window.$ = window.jQuery = require('jquery');
