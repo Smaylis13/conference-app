@@ -1,6 +1,6 @@
 
 // Intégration de bootstrap (partie JS)
-import 'bootstrap';
+//import 'bootstrap';
 
 // Intégration de boostrap (partie CSS)
 import 'bootstrap/dist/css/bootstrap.css'
