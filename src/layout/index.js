@@ -4,7 +4,6 @@ export default class layout{
 
     render(){
         $("body").html(template);
-
     }
 
 

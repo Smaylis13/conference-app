@@ -1,18 +1,22 @@
 import TalkService from '../../common/talk.service';;
 
-export default class listSessions{
+export default class session{
 
-    render(idView){
+    render(id){
         const talkService = new TalkService();
         const tabSessions = talkService.findAllSessions()
         
+        
         tabSessions.then(data => {
-            let str = "<ul>"
+            let str = ""
             data.forEach(data => {
-                str = str + "<a href='#'><li>"+ data.title + "</li></a>"
+                if(data.id==id){
+                    str+="<h1>"+data.title+"</h1>"
+                    str+="<p>"+data.desc+"</p>"
+
+                }
             })
-            str=str+"</ul>"
-            $("#"+idView).html(str)
+            $("body").html(str);
         })
 
 
