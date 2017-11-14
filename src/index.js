@@ -1,9 +1,9 @@
 
 // Intégration de bootstrap (partie JS)
-//import 'bootstrap';
+import 'bootstrap';
 
 // Intégration de boostrap (partie CSS)
-//import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.css'
 
 import TalkService from './common/talk.service';
 import layout from "./layout/index"
