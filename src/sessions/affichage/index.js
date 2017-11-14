@@ -27,7 +27,7 @@ export default class session{
                             }
                         })
                     })
-                    str+=`<a type="button" class="btn btn-primary" href="http://localhost:8080/#note" >Mes Notes</a>`
+                    str+=`<a type="button" class="btn btn-primary" href="http://localhost:8080/#note/${data.id}" >Mes Notes</a>`
                     str+="</div>"
                    
 

@@ -48,7 +48,7 @@ tabSpeakers.then((data) => {
         console.log(id)
         let s= new session();
         s.render(id);
-    } else if(location.hash == `#note`){
+    } else if(location.hash == `#note/${id}`){
         let n = new note()
         n.render();
     }
