@@ -16,6 +16,7 @@ import vueAccueil from "./defaultVue/index"
 import logo from "./logo/index"
 import session from "./sessions/affichage/index"
 
+import note from "./note/index"
 
 // intégration JQuery
 window.$ = window.jQuery = require('jquery');
@@ -47,6 +48,9 @@ tabSpeakers.then((data) => {
         console.log(id)
         let s= new session();
         s.render(id);
+    } else if(location.hash == `#note`){
+        let n = new note()
+        n.render();
     }
     else {
         let defvue = new vueAccueil();
