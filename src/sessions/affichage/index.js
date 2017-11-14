@@ -21,7 +21,7 @@ export default class session{
                             if(speakerData.id==speaker){
                                 str+=`
                                         <img src="/images/${speakerData.image}" width="50" height="50">
-                                        ${speaker}
+                                        <a href='http://localhost:8080/#speaker/${speakerData.id}'>${speakerData.firstname}+${speakerData.lastname}
                                       `
                                 str+="<br>"
                             }

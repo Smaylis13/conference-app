@@ -6,6 +6,4 @@ export default class layout{
         $("body").html(template);
     }
 
-
-
 }
