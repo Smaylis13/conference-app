@@ -1,4 +1,4 @@
-import TalkService from '../../common/talk.service';;
+import TalkService from '../../common/talk.service';
 
 export default class listSpeakers{
 
@@ -12,7 +12,7 @@ export default class listSpeakers{
                 str = str + "<li>" + data.firstname + "</li>"
             })
             str=str+"</ul>"
-            $("#main-view").html(str)
+            $("#"+idView).html(str)
         })
 
 
