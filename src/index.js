@@ -9,6 +9,8 @@ import TalkService from './common/talk.service';
 import layout from "./layout/index"
 import listSpeakers from "./speakers/list/index"
 import listSessions from "./sessions/list/index"
+import navBar from "./navbar/index"
+import vueAccueil from "./defaultVue/index"
 
 // intégration JQuery
 window.$ = window.jQuery = require('jquery');
@@ -35,7 +37,8 @@ tabSpeakers.then((data) => {
         let list= new listSessions();
         list.render("main-view");
     } else {
-    // TODO afficher vue par défaut
+        let defvue = new vueAccueil();
+        defvue.render()
     }
     }
     window.addEventListener('load', () => {
@@ -49,4 +52,12 @@ tabSpeakers.then((data) => {
 // ................
 let lay = new layout();
 lay.render();
+
+// nav Bar 
+
+let nav = new navBar();
+nav.render()
+
+//default vue
+
 
