@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 import TalkService from './common/talk.service';
 import layout from "./layout/index"
+import listSpeakers from "./speakers/list/index"
+import listSessions from "./sessions/list/index"
 
 // intégration JQuery
 window.$ = window.jQuery = require('jquery');
@@ -15,21 +17,23 @@ window.$ = window.jQuery = require('jquery');
 const talkService = new TalkService();
 
 const tabSpeakers = talkService.findAllSpeakers()
-let i = 0
+/*
 tabSpeakers.then((data) => {
     for(i in data)
         console.log(data[i].firstname)
 })
-
+*/
 
 
  // Etape 4 - Routeur 
-
+ 
  var router = () => {
     if (location.hash == '#speakers-list') {
-    // TODO afficher vue liste des présentateurs
+        let list= new listSpeakers();
+        list.render("main-view");
     } else if (location.hash == '#sessions-list') {
-    // TODO afficher vue liste des sessions
+        let list= new listSessions();
+        list.render("main-view");
     } else {
     // TODO afficher vue par défaut
     }
@@ -45,3 +49,4 @@ tabSpeakers.then((data) => {
 // ................
 let lay = new layout();
 lay.render();
+
