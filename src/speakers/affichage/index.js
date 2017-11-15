@@ -35,7 +35,7 @@ export default class speaker{
                         for(i in s.speakers){
                             if(s.speakers[i]==speaker.id){
                                 str+=`
-                                    <a href='http://localhost:8080/#session/${s.id}'>${s.title}
+                                    <a href='#session/${s.id}'>${s.title}
                                     `
                                 str+="<br>"
                             }
