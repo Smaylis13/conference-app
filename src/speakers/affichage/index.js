@@ -22,7 +22,7 @@ export default class speaker{
                             `
                     speaker.socials.forEach(function(social){
                         str+="<div class='raw'>"
-                        str+=`<a href='${social.link}'>${social.class}`
+                        str+=`<a href='${social.link}'>${social.class}</a>`
                         str+="<div>"
                     })
             
