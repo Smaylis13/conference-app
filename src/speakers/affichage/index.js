@@ -38,6 +38,7 @@ export default class speaker{
                             if(sessions[j].speakers[k]==data[i].id){
                                 str+=`
                                     <a href='#session/${sessions[j].id}'>${sessions[j].title}
+
                                     `
                                 str+="<br>"
                             }

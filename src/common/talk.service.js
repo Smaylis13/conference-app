@@ -13,5 +13,5 @@ export default class TalkService {
         $.get('https://raw.githubusercontent.com/2017-d13/conference-data/master/sessions.json')
         .then(data => resolve(JSON.parse(data)))        );
     }
-    
+	    
 }
