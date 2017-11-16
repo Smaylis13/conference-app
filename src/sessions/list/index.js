@@ -8,7 +8,7 @@ export default class listSessions{
         
         tabSessions.then(data => {
             let str = "<ul>"
-        JSON.parse(data).forEach(data => {
+        data.forEach(data => {
                 str = str + `<a href='#session/${data.id}'><li> ${data.title} </li></a>`
             })
             str=str+"</ul>"
