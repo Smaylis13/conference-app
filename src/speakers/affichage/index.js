@@ -13,14 +13,16 @@ export default class speaker{
         tabSpeakers.then(data => {tabSessions.then(sessions=>{
 
             let str = ""
-            data.forEach(speaker => {
-                if(speaker.id==id){
+            console.log(data)
+            //data.forEach(speaker => 
+            for(let i in data) {
+                if(data[i].id==id){
 
                     str+=`<div class="container">
-                            <h4>${speaker.lastname}+${speaker.firstname}</h4>
-                            <img src="/images/${speaker.image}" width="300" height="350">
+                            <h4>${data[i].lastname}+${data[i].firstname}</h4>
+                            <img src="/images/${data[i].image}" width="300" height="350">
                             `
-                    speaker.socials.forEach(function(social){
+                    data[i].socials.forEach(function(social){
                         str+="<div class='raw'>"
                         str+=`<a href='${social.link}'>${social.class}</a>`
                         str+="<div>"
@@ -28,26 +30,26 @@ export default class speaker{
             
 
                     str+=`<h4>Ses sessions</h4>`
-                    console.log(speaker.id)
-                    sessions.forEach(function(s){
-                        console.log(s.speakers)
+                    console.log(data[i].id)
+                    for (let j in sessions ) {
+                        console.log(sessions[j].speakers)
                         let i=0
-                        for(i in s.speakers){
-                            if(s.speakers[i]==speaker.id){
+                        for(let k in sessions[j].speakers){
+                            if(sessions[j].speakers[k]==data[i].id){
                                 str+=`
-                                    <a href='http://localhost:8080/#session/${s.id}'>${s.title}
+                                    <a href='#session/${sessions[j].id}'>${sessions[j].title}
                                     `
                                 str+="<br>"
                             }
                         }
-                    })
+                    }
 
                     str+="</div>"
 
                 }
 
 
-            })
+            }
             $("#main-view").html(str);
 
         })})

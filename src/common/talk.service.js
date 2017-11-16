@@ -1,11 +1,17 @@
 
 export default class TalkService {
 
+
     findAllSpeakers() {
-        return $.get('http://localhost:3000/speakers');//[{id: 'sp1', fullname:'hello'}];
+        return new Promise((resolve,rej) =>
+        $.get('https://raw.githubusercontent.com/2017-d13/conference-data/master/speakers.json')
+        .then(data => resolve(JSON.parse(data)))        );
     }
 	
 	findAllSessions() {
-        return $.get('http://localhost:3000/sessions');//[{id: 'sp1', fullname:'hello'}];
+        return new Promise((resolve,rej) =>
+        $.get('https://raw.githubusercontent.com/2017-d13/conference-data/master/sessions.json')
+        .then(data => resolve(JSON.parse(data)))        );
     }
+    
 }

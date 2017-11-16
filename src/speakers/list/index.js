@@ -9,7 +9,7 @@ export default class listSpeakers{
         tabSpeakers.then(data => {
             let str = "<ul>"
             data.forEach(data => {
-                str = str + `<a href='http://localhost:8080/#speaker/${data.id}'><li> ${data.firstname} + ${data.lastname} </li></a>`
+                str = str + `<a href='#speaker/${data.id}'><li> ${data.firstname} + ${data.lastname} </li></a>`
             })
             str=str+"</ul>"
             $("#"+idView).html(str)

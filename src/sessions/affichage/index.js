@@ -21,13 +21,13 @@ export default class session{
                             if(speakerData.id==speaker){
                                 str+=`
                                         <img src="/images/${speakerData.image}" width="50" height="50">
-                                        <a href='http://localhost:8080/#speaker/${speakerData.id}'>${speakerData.firstname}+${speakerData.lastname}
+                                        <a href='#speaker/${speakerData.id}'>${speakerData.firstname}+${speakerData.lastname}
                                       `
                                 str+="<br>"
                             }
                         })
                     })
-                    str+=`<br><a type="button" class="btn btn-primary" href="http://localhost:8080/#note/${data.id}" id="btnMesNotes" >Mes Notes</a>`
+                    str+=`<br><a type="button" class="btn btn-primary" href="#note/${data.id}" id="btnMesNotes" >Mes Notes</a>`
                     str+="</div>"
                    
 

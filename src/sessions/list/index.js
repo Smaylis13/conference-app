@@ -8,8 +8,8 @@ export default class listSessions{
         
         tabSessions.then(data => {
             let str = "<ul>"
-            data.forEach(data => {
-                str = str + `<a href='http://localhost:8080/#session/${data.id}'><li> ${data.title} </li></a>`
+            JSON.parse(data).forEach(data => {
+                str = str + `<a href='#session/${data.id}'><li> ${data.title} </li></a>`
             })
             str=str+"</ul>"
             $("#"+idView).html(str)
